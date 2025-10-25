@@ -4,22 +4,21 @@ import com.google.gson.*;
 import java.io.*;
 import java.util.*;
 
-
 public class Main {
     public static void main(String[] args) throws Exception {
 
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         JsonObject input = gson.fromJson(new FileReader("data/assign_3_input_reset.json"), JsonObject.class);
         JsonArray graphs = input.getAsJsonArray("graphs");
-
         JsonArray results = new JsonArray();
 
+        System.out.println("🚀 Starting MST computation for " + graphs.size() + " graphs...");
+        System.out.println("==============================================================");
 
         for (JsonElement gElem : graphs) {
             JsonObject g = gElem.getAsJsonObject();
             int id = g.get("id").getAsInt();
 
-            // Read nodes and edges
             List<String> nodes = new ArrayList<>();
             g.getAsJsonArray("nodes").forEach(n -> nodes.add(n.getAsString()));
             Graph graph = new Graph(nodes);
@@ -33,11 +32,23 @@ public class Main {
                 );
             });
 
-            // Log progress
-            System.out.println("🔄 Processing graph ID: " + id +
+
+            if (id <= 5) {
+                System.out.println("\n=== 🗺 Preview Graph ID: " + id + " ===");
+                System.out.println("Vertices (" + graph.getVerticesCount() + "): " + nodes);
+                System.out.println("Edges:");
+                g.getAsJsonArray("edges").forEach(e -> {
+                    JsonObject eo = e.getAsJsonObject();
+                    System.out.println("  " + eo.get("from").getAsString() + " - " +
+                            eo.get("to").getAsString() + " (w=" + eo.get("weight").getAsInt() + ")");
+                });
+                System.out.println("===============================");
+            }
+
+
+            System.out.println("\n📊 Processing Graph ID: " + id +
                     " | Vertices: " + graph.getVerticesCount() +
                     " | Edges: " + graph.getEdgesCount());
-
 
 
             long startPrim = System.nanoTime();
@@ -49,7 +60,6 @@ public class Main {
             MSTResult kruskal = KruskalAlgorithm.run(graph);
             long endKruskal = System.nanoTime();
             kruskal.setTimeMs((endKruskal - startKruskal) / 1_000_000.0);
-
 
             if (prim.getMstEdges().size() < graph.getVerticesCount() - 1)
                 prim.setDisconnected(true);
@@ -68,19 +78,28 @@ public class Main {
             result.add("prim", toJson(gson, prim));
             result.add("kruskal", toJson(gson, kruskal));
             results.add(result);
+
+            System.out.println("✅ Finished Graph ID: " + id +
+                    " | Prim Cost: " + prim.getTotalCost() +
+                    " | Kruskal Cost: " + kruskal.getTotalCost());
         }
 
+        // === Build and save output file ===
         JsonObject output = new JsonObject();
         output.add("results", results);
 
-
-        try (FileWriter fw = new FileWriter("data/output.json")) {
+        File outputFile = new File("data/output.json");
+        outputFile.getParentFile().mkdirs();
+        try (FileWriter fw = new FileWriter(outputFile)) {
             gson.toJson(output, fw);
         }
 
-        System.out.println("\n✅ Output written to data/output.json");
-        System.out.println("📊 All graphs processed successfully.");
+        System.out.println("\n==============================================================");
+        System.out.println("🎯 All graphs processed successfully!");
+        System.out.println("📂 Output written to: data/output.json");
+        System.out.println("==============================================================");
     }
+
 
     private static JsonObject toJson(Gson gson, MSTResult res) {
         JsonObject o = new JsonObject();

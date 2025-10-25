@@ -1,9 +1,9 @@
 package com.mstproject;
 
 public class Edge implements Comparable<Edge> {
-    private String from;
-    private String to;
-    private int weight;
+    private final String from;
+    private final String to;
+    private final int weight;
 
     public Edge(String from, String to, int weight) {
         this.from = from;
@@ -11,12 +11,41 @@ public class Edge implements Comparable<Edge> {
         this.weight = weight;
     }
 
-    public String getFrom() { return from; }
-    public String getTo() { return to; }
-    public int getWeight() { return weight; }
+    public String getFrom() {
+        return from;
+    }
+
+    public String getTo() {
+        return to;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
 
     @Override
     public int compareTo(Edge other) {
         return Integer.compare(this.weight, other.weight);
+    }
+
+    @Override
+    public String toString() {
+        return "(" + from + " - " + to + ", w=" + weight + ")";
+    }
+
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Edge)) return false;
+        Edge e = (Edge) obj;
+        return (from.equals(e.from) && to.equals(e.to) && weight == e.weight)
+                || (from.equals(e.to) && to.equals(e.from) && weight == e.weight);
+    }
+
+    @Override
+    public int hashCode() {
+        return from.hashCode() + to.hashCode() + weight;
     }
 }
