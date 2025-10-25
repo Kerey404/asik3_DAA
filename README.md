@@ -52,11 +52,11 @@ This project optimizes a city transportation network using **Minimum Spanning Tr
 
 **Execution Time Comparison**  
 
-![Execution Time](./execution_time_comparison.png)  
+![Execution Time](.data/execution_time_comparison.png)  
 
 **Operations Count Comparison**  
 
-![Operations Count](./operations_count_comparison.png)  
+![Operations Count](.data/operations_count_comparison.png)  
 
 * Kruskal scales predictably with edge count.  
 * Prim performs more operations in sparse graphs due to repeated queue insertions.
@@ -101,5 +101,5 @@ This project optimizes a city transportation network using **Minimum Spanning Tr
 ## 8. GitHub / Project Integration
 
 * Input JSON: [`assign_3_input_reset.json`](./data/assign_3_input_reset.json)  
-* Output CSV: [`mst_summary.csv`](./mst_summary.csv)  
+* Output CSV: [`mst_summary.csv`](.data/mst_summary.csv)  
 * Graphs: `execution_time_comparison.png`, `operations_count_comparison.png`
