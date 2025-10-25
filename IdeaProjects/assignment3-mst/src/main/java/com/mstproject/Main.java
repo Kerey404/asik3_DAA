@@ -19,6 +19,7 @@ public class Main {
             JsonObject g = gElem.getAsJsonObject();
             int id = g.get("id").getAsInt();
 
+
             List<String> nodes = new ArrayList<>();
             g.getAsJsonArray("nodes").forEach(n -> nodes.add(n.getAsString()));
             Graph graph = new Graph(nodes);
@@ -32,7 +33,6 @@ public class Main {
                 );
             });
 
-
             if (id <= 5) {
                 System.out.println("\n=== 🗺 Preview Graph ID: " + id + " ===");
                 System.out.println("Vertices (" + graph.getVerticesCount() + "): " + nodes);
@@ -44,7 +44,6 @@ public class Main {
                 });
                 System.out.println("===============================");
             }
-
 
             System.out.println("\n📊 Processing Graph ID: " + id +
                     " | Vertices: " + graph.getVerticesCount() +
@@ -61,11 +60,20 @@ public class Main {
             long endKruskal = System.nanoTime();
             kruskal.setTimeMs((endKruskal - startKruskal) / 1_000_000.0);
 
+
             if (prim.getMstEdges().size() < graph.getVerticesCount() - 1)
                 prim.setDisconnected(true);
             if (kruskal.getMstEdges().size() < graph.getVerticesCount() - 1)
                 kruskal.setDisconnected(true);
 
+            boolean equalCost = prim.getTotalCost() == kruskal.getTotalCost();
+            double diffMs = prim.getTimeMs() - kruskal.getTimeMs();
+            long diffOps = prim.getOperations() - kruskal.getOperations();
+            String fasterAlgorithm;
+
+            if (Math.abs(diffMs) < 1e-6) fasterAlgorithm = "Equal";
+            else if (diffMs < 0) fasterAlgorithm = "Prim";
+            else fasterAlgorithm = "Kruskal";
 
             JsonObject result = new JsonObject();
             result.addProperty("graph_id", id);
@@ -77,14 +85,25 @@ public class Main {
 
             result.add("prim", toJson(gson, prim));
             result.add("kruskal", toJson(gson, kruskal));
+
+
+            JsonObject comparison = new JsonObject();
+            comparison.addProperty("equal_cost", equalCost);
+            comparison.addProperty("faster_algorithm", fasterAlgorithm);
+            comparison.addProperty("difference_ms", diffMs);
+            comparison.addProperty("difference_ops", diffOps);
+            result.add("comparison", comparison);
+
             results.add(result);
 
-            System.out.println("✅ Finished Graph ID: " + id +
-                    " | Prim Cost: " + prim.getTotalCost() +
-                    " | Kruskal Cost: " + kruskal.getTotalCost());
+
+            System.out.printf(
+                    "✅ Finished Graph ID: %d | Prim Cost: %d | Kruskal Cost: %d | Faster: %s | Δtime: %.3f ms | Δops: %d%n",
+                    id, prim.getTotalCost(), kruskal.getTotalCost(), fasterAlgorithm, diffMs, diffOps
+            );
         }
 
-        // === Build and save output file ===
+
         JsonObject output = new JsonObject();
         output.add("results", results);
 

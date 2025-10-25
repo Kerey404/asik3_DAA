@@ -86,7 +86,7 @@
         ],
         "total_cost": 354,
         "operations_count": 18,
-        "execution_time_ms": 2.4775,
+        "execution_time_ms": 40.1241,
         "disconnected": false
       },
       "kruskal": {
@@ -169,8 +169,14 @@
         ],
         "total_cost": 354,
         "operations_count": 74,
-        "execution_time_ms": 1.302,
+        "execution_time_ms": 3.8341,
         "disconnected": false
+      },
+      "comparison": {
+        "equal_cost": true,
+        "faster_algorithm": "Kruskal",
+        "difference_ms": 36.29,
+        "difference_ops": -56
       }
     },
     {
@@ -289,7 +295,7 @@
         ],
         "total_cost": 402,
         "operations_count": 37,
-        "execution_time_ms": 0.1604,
+        "execution_time_ms": 0.1362,
         "disconnected": false
       },
       "kruskal": {
@@ -402,8 +408,14 @@
         ],
         "total_cost": 402,
         "operations_count": 168,
-        "execution_time_ms": 0.161,
+        "execution_time_ms": 0.1395,
         "disconnected": false
+      },
+      "comparison": {
+        "equal_cost": true,
+        "faster_algorithm": "Prim",
+        "difference_ms": -0.003300000000000025,
+        "difference_ops": -131
       }
     },
     {
@@ -457,7 +469,7 @@
         ],
         "total_cost": 149,
         "operations_count": 8,
-        "execution_time_ms": 0.0706,
+        "execution_time_ms": 0.05,
         "disconnected": false
       },
       "kruskal": {
@@ -505,8 +517,14 @@
         ],
         "total_cost": 149,
         "operations_count": 29,
-        "execution_time_ms": 0.0531,
+        "execution_time_ms": 0.049,
         "disconnected": false
+      },
+      "comparison": {
+        "equal_cost": true,
+        "faster_algorithm": "Kruskal",
+        "difference_ms": 0.0010000000000000009,
+        "difference_ops": -21
       }
     },
     {
@@ -550,7 +568,7 @@
         ],
         "total_cost": 135,
         "operations_count": 8,
-        "execution_time_ms": 0.0262,
+        "execution_time_ms": 0.0372,
         "disconnected": false
       },
       "kruskal": {
@@ -588,8 +606,14 @@
         ],
         "total_cost": 135,
         "operations_count": 32,
-        "execution_time_ms": 0.036,
+        "execution_time_ms": 0.038,
         "disconnected": false
+      },
+      "comparison": {
+        "equal_cost": true,
+        "faster_algorithm": "Prim",
+        "difference_ms": -8.000000000000021E-4,
+        "difference_ops": -24
       }
     },
     {
@@ -703,7 +727,7 @@
         ],
         "total_cost": 362,
         "operations_count": 26,
-        "execution_time_ms": 0.0815,
+        "execution_time_ms": 0.0957,
         "disconnected": false
       },
       "kruskal": {
@@ -811,8 +835,14 @@
         ],
         "total_cost": 362,
         "operations_count": 112,
-        "execution_time_ms": 0.0954,
+        "execution_time_ms": 0.1068,
         "disconnected": false
+      },
+      "comparison": {
+        "equal_cost": true,
+        "faster_algorithm": "Prim",
+        "difference_ms": -0.011100000000000013,
+        "difference_ops": -86
       }
     },
     {
@@ -2161,7 +2191,7 @@
         ],
         "total_cost": 5395,
         "operations_count": 667,
-        "execution_time_ms": 1.6241,
+        "execution_time_ms": 2.2283,
         "disconnected": false
       },
       "kruskal": {
@@ -3504,8 +3534,14 @@
         ],
         "total_cost": 5395,
         "operations_count": 3189,
-        "execution_time_ms": 1.7669,
+        "execution_time_ms": 1.8943,
         "disconnected": false
+      },
+      "comparison": {
+        "equal_cost": true,
+        "faster_algorithm": "Kruskal",
+        "difference_ms": 0.33399999999999985,
+        "difference_ops": -2522
       }
     },
     {
@@ -3754,7 +3790,7 @@
         ],
         "total_cost": 1339,
         "operations_count": 64,
-        "execution_time_ms": 0.2094,
+        "execution_time_ms": 0.2007,
         "disconnected": false
       },
       "kruskal": {
@@ -3997,8 +4033,14 @@
         ],
         "total_cost": 1339,
         "operations_count": 281,
-        "execution_time_ms": 0.2262,
+        "execution_time_ms": 0.1944,
         "disconnected": false
+      },
+      "comparison": {
+        "equal_cost": true,
+        "faster_algorithm": "Kruskal",
+        "difference_ms": 0.0063,
+        "difference_ops": -217
       }
     },
     {
@@ -4967,7 +5009,7 @@
         ],
         "total_cost": 5380,
         "operations_count": 350,
-        "execution_time_ms": 1.0778,
+        "execution_time_ms": 0.7776,
         "disconnected": false
       },
       "kruskal": {
@@ -5930,8 +5972,14 @@
         ],
         "total_cost": 5380,
         "operations_count": 1628,
-        "execution_time_ms": 1.0834,
+        "execution_time_ms": 0.7933,
         "disconnected": false
+      },
+      "comparison": {
+        "equal_cost": true,
+        "faster_algorithm": "Prim",
+        "difference_ms": -0.015700000000000047,
+        "difference_ops": -1278
       }
     },
     {
@@ -7115,7 +7163,7 @@
         ],
         "total_cost": 5689,
         "operations_count": 453,
-        "execution_time_ms": 1.2924,
+        "execution_time_ms": 1.0527,
         "disconnected": false
       },
       "kruskal": {
@@ -8293,8 +8341,14 @@
         ],
         "total_cost": 5689,
         "operations_count": 2135,
-        "execution_time_ms": 1.1917,
+        "execution_time_ms": 1.3616,
         "disconnected": false
+      },
+      "comparison": {
+        "equal_cost": true,
+        "faster_algorithm": "Prim",
+        "difference_ms": -0.30889999999999995,
+        "difference_ops": -1682
       }
     },
     {
@@ -9018,7 +9072,7 @@
         ],
         "total_cost": 2990,
         "operations_count": 274,
-        "execution_time_ms": 0.4097,
+        "execution_time_ms": 0.8409,
         "disconnected": false
       },
       "kruskal": {
@@ -9736,8 +9790,14 @@
         ],
         "total_cost": 2990,
         "operations_count": 1271,
-        "execution_time_ms": 0.5618,
+        "execution_time_ms": 0.7328,
         "disconnected": false
+      },
+      "comparison": {
+        "equal_cost": true,
+        "faster_algorithm": "Kruskal",
+        "difference_ms": 0.10809999999999997,
+        "difference_ops": -997
       }
     },
     {
@@ -10051,7 +10111,7 @@
         ],
         "total_cost": 1629,
         "operations_count": 97,
-        "execution_time_ms": 0.1362,
+        "execution_time_ms": 0.1349,
         "disconnected": false
       },
       "kruskal": {
@@ -10359,8 +10419,14 @@
         ],
         "total_cost": 1629,
         "operations_count": 442,
-        "execution_time_ms": 0.1738,
+        "execution_time_ms": 0.1854,
         "disconnected": false
+      },
+      "comparison": {
+        "equal_cost": true,
+        "faster_algorithm": "Prim",
+        "difference_ms": -0.05050000000000002,
+        "difference_ops": -345
       }
     },
     {
@@ -11159,7 +11225,7 @@
         ],
         "total_cost": 3063,
         "operations_count": 296,
-        "execution_time_ms": 0.4594,
+        "execution_time_ms": 0.5529,
         "disconnected": false
       },
       "kruskal": {
@@ -11952,8 +12018,14 @@
         ],
         "total_cost": 3063,
         "operations_count": 1381,
-        "execution_time_ms": 1.1333,
+        "execution_time_ms": 0.6107,
         "disconnected": false
+      },
+      "comparison": {
+        "equal_cost": true,
+        "faster_algorithm": "Prim",
+        "difference_ms": -0.057800000000000074,
+        "difference_ops": -1085
       }
     },
     {
@@ -12497,7 +12569,7 @@
         ],
         "total_cost": 2389,
         "operations_count": 189,
-        "execution_time_ms": 0.3131,
+        "execution_time_ms": 0.2609,
         "disconnected": false
       },
       "kruskal": {
@@ -13035,8 +13107,14 @@
         ],
         "total_cost": 2389,
         "operations_count": 887,
-        "execution_time_ms": 0.3221,
+        "execution_time_ms": 0.2981,
         "disconnected": false
+      },
+      "comparison": {
+        "equal_cost": true,
+        "faster_algorithm": "Prim",
+        "difference_ms": -0.037199999999999955,
+        "difference_ops": -698
       }
     },
     {
@@ -14510,7 +14588,7 @@
         ],
         "total_cost": 6518,
         "operations_count": 597,
-        "execution_time_ms": 0.8712,
+        "execution_time_ms": 0.8392,
         "disconnected": false
       },
       "kruskal": {
@@ -15978,8 +16056,14 @@
         ],
         "total_cost": 6518,
         "operations_count": 2821,
-        "execution_time_ms": 1.0189,
+        "execution_time_ms": 12.8923,
         "disconnected": false
+      },
+      "comparison": {
+        "equal_cost": true,
+        "faster_algorithm": "Prim",
+        "difference_ms": -12.0531,
+        "difference_ops": -2224
       }
     },
     {
@@ -17488,7 +17572,7 @@
         ],
         "total_cost": 7641,
         "operations_count": 602,
-        "execution_time_ms": 0.8182,
+        "execution_time_ms": 0.8297,
         "disconnected": false
       },
       "kruskal": {
@@ -18991,8 +19075,14 @@
         ],
         "total_cost": 7641,
         "operations_count": 2890,
-        "execution_time_ms": 0.7401,
+        "execution_time_ms": 1.3229,
         "disconnected": false
+      },
+      "comparison": {
+        "equal_cost": true,
+        "faster_algorithm": "Prim",
+        "difference_ms": -0.49319999999999997,
+        "difference_ops": -2288
       }
     },
     {
@@ -20991,7 +21081,7 @@
         ],
         "total_cost": 9387,
         "operations_count": 831,
-        "execution_time_ms": 1.19,
+        "execution_time_ms": 2.2797,
         "disconnected": false
       },
       "kruskal": {
@@ -22984,8 +23074,14 @@
         ],
         "total_cost": 9387,
         "operations_count": 3942,
-        "execution_time_ms": 1.3394,
+        "execution_time_ms": 3.7568,
         "disconnected": false
+      },
+      "comparison": {
+        "equal_cost": true,
+        "faster_algorithm": "Prim",
+        "difference_ms": -1.4771,
+        "difference_ops": -3111
       }
     },
     {
@@ -26779,7 +26875,7 @@
         ],
         "total_cost": 15659,
         "operations_count": 1859,
-        "execution_time_ms": 3.1661,
+        "execution_time_ms": 7.2538,
         "disconnected": false
       },
       "kruskal": {
@@ -30567,8 +30663,14 @@
         ],
         "total_cost": 15659,
         "operations_count": 8920,
-        "execution_time_ms": 3.2015,
+        "execution_time_ms": 9.1285,
         "disconnected": false
+      },
+      "comparison": {
+        "equal_cost": true,
+        "faster_algorithm": "Prim",
+        "difference_ms": -1.8747000000000007,
+        "difference_ops": -7061
       }
     },
     {
@@ -32342,7 +32444,7 @@
         ],
         "total_cost": 7644,
         "operations_count": 762,
-        "execution_time_ms": 0.817,
+        "execution_time_ms": 11.1931,
         "disconnected": false
       },
       "kruskal": {
@@ -34110,8 +34212,14 @@
         ],
         "total_cost": 7644,
         "operations_count": 3603,
-        "execution_time_ms": 1.1418,
+        "execution_time_ms": 7.2175,
         "disconnected": false
+      },
+      "comparison": {
+        "equal_cost": true,
+        "faster_algorithm": "Kruskal",
+        "difference_ms": 3.975599999999999,
+        "difference_ops": -2841
       }
     },
     {
@@ -37420,7 +37528,7 @@
         ],
         "total_cost": 14183,
         "operations_count": 1409,
-        "execution_time_ms": 1.8793,
+        "execution_time_ms": 3.873,
         "disconnected": false
       },
       "kruskal": {
@@ -40723,8 +40831,14 @@
         ],
         "total_cost": 14183,
         "operations_count": 6743,
-        "execution_time_ms": 1.9507,
+        "execution_time_ms": 4.3908,
         "disconnected": false
+      },
+      "comparison": {
+        "equal_cost": true,
+        "faster_algorithm": "Prim",
+        "difference_ms": -0.5177999999999994,
+        "difference_ops": -5334
       }
     },
     {
@@ -44293,7 +44407,7 @@
         ],
         "total_cost": 16308,
         "operations_count": 1613,
-        "execution_time_ms": 2.5751,
+        "execution_time_ms": 3.4421,
         "disconnected": false
       },
       "kruskal": {
@@ -47856,8 +47970,14 @@
         ],
         "total_cost": 16308,
         "operations_count": 7674,
-        "execution_time_ms": 2.383,
+        "execution_time_ms": 3.1393,
         "disconnected": false
+      },
+      "comparison": {
+        "equal_cost": true,
+        "faster_algorithm": "Kruskal",
+        "difference_ms": 0.30279999999999996,
+        "difference_ops": -6061
       }
     },
     {
@@ -50136,7 +50256,7 @@
         ],
         "total_cost": 10593,
         "operations_count": 1094,
-        "execution_time_ms": 1.282,
+        "execution_time_ms": 1.3023,
         "disconnected": false
       },
       "kruskal": {
@@ -52409,8 +52529,14 @@
         ],
         "total_cost": 10593,
         "operations_count": 5229,
-        "execution_time_ms": 1.2314,
+        "execution_time_ms": 2.6585,
         "disconnected": false
+      },
+      "comparison": {
+        "equal_cost": true,
+        "faster_algorithm": "Prim",
+        "difference_ms": -1.3562,
+        "difference_ops": -4135
       }
     },
     {
@@ -56839,7 +56965,7 @@
         ],
         "total_cost": 23790,
         "operations_count": 1556,
-        "execution_time_ms": 2.1784,
+        "execution_time_ms": 7.2648,
         "disconnected": false
       },
       "kruskal": {
@@ -61262,8 +61388,14 @@
         ],
         "total_cost": 23790,
         "operations_count": 7318,
-        "execution_time_ms": 2.0245,
+        "execution_time_ms": 6.82,
         "disconnected": false
+      },
+      "comparison": {
+        "equal_cost": true,
+        "faster_algorithm": "Kruskal",
+        "difference_ms": 0.44479999999999986,
+        "difference_ops": -5762
       }
     },
     {
@@ -63197,7 +63329,7 @@
         ],
         "total_cost": 7850,
         "operations_count": 790,
-        "execution_time_ms": 1.1545,
+        "execution_time_ms": 1.0926,
         "disconnected": false
       },
       "kruskal": {
@@ -65125,8 +65257,14 @@
         ],
         "total_cost": 7850,
         "operations_count": 3732,
-        "execution_time_ms": 0.6216,
+        "execution_time_ms": 0.9638,
         "disconnected": false
+      },
+      "comparison": {
+        "equal_cost": true,
+        "faster_algorithm": "Kruskal",
+        "difference_ms": 0.12880000000000003,
+        "difference_ops": -2942
       }
     },
     {
@@ -69105,7 +69243,7 @@
         ],
         "total_cost": 15589,
         "operations_count": 1527,
-        "execution_time_ms": 3.3036,
+        "execution_time_ms": 3.1159,
         "disconnected": false
       },
       "kruskal": {
@@ -73078,8 +73216,14 @@
         ],
         "total_cost": 15589,
         "operations_count": 7318,
-        "execution_time_ms": 2.2292,
+        "execution_time_ms": 2.2085,
         "disconnected": false
+      },
+      "comparison": {
+        "equal_cost": true,
+        "faster_algorithm": "Kruskal",
+        "difference_ms": 0.9074,
+        "difference_ops": -5791
       }
     },
     {
@@ -75893,7 +76037,7 @@
         ],
         "total_cost": 13209,
         "operations_count": 1098,
-        "execution_time_ms": 1.6212,
+        "execution_time_ms": 1.595,
         "disconnected": false
       },
       "kruskal": {
@@ -78701,8 +78845,14 @@
         ],
         "total_cost": 13209,
         "operations_count": 5232,
-        "execution_time_ms": 1.12,
+        "execution_time_ms": 1.7799,
         "disconnected": false
+      },
+      "comparison": {
+        "equal_cost": true,
+        "faster_algorithm": "Prim",
+        "difference_ms": -0.18490000000000006,
+        "difference_ops": -4134
       }
     },
     {
@@ -86956,7 +87106,7 @@
         ],
         "total_cost": 43507,
         "operations_count": 3428,
-        "execution_time_ms": 5.3275,
+        "execution_time_ms": 8.3695,
         "disconnected": false
       },
       "kruskal": {
@@ -95204,8 +95354,14 @@
         ],
         "total_cost": 43507,
         "operations_count": 16231,
-        "execution_time_ms": 5.3115,
+        "execution_time_ms": 6.0462,
         "disconnected": false
+      },
+      "comparison": {
+        "equal_cost": true,
+        "faster_algorithm": "Kruskal",
+        "difference_ms": 2.3233000000000006,
+        "difference_ops": -12803
       }
     },
     {
@@ -104314,7 +104470,7 @@
         ],
         "total_cost": 41428,
         "operations_count": 4243,
-        "execution_time_ms": 10.1158,
+        "execution_time_ms": 8.1742,
         "disconnected": false
       },
       "kruskal": {
@@ -113417,8 +113573,14 @@
         ],
         "total_cost": 41428,
         "operations_count": 20239,
-        "execution_time_ms": 8.0898,
+        "execution_time_ms": 6.6429,
         "disconnected": false
+      },
+      "comparison": {
+        "equal_cost": true,
+        "faster_algorithm": "Kruskal",
+        "difference_ms": 1.5313000000000008,
+        "difference_ops": -15996
       }
     },
     {
@@ -118677,7 +118839,7 @@
         ],
         "total_cost": 23912,
         "operations_count": 2429,
-        "execution_time_ms": 6.6199,
+        "execution_time_ms": 3.9271,
         "disconnected": false
       },
       "kruskal": {
@@ -123930,8 +124092,14 @@
         ],
         "total_cost": 23912,
         "operations_count": 11590,
-        "execution_time_ms": 6.7203,
+        "execution_time_ms": 3.5849,
         "disconnected": false
+      },
+      "comparison": {
+        "equal_cost": true,
+        "faster_algorithm": "Kruskal",
+        "difference_ms": 0.3421999999999996,
+        "difference_ops": -9161
       }
     }
   ]
